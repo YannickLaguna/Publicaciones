@@ -6,7 +6,7 @@ tags:
   - modelizacion
   - ✔️
 published: true
-u_modif: 2026-03-08 | 03:23
+u_modif: 2026-03-08 | 14:01
 ---
 # Introducción
 En la Teoría Moderna de Optimización (MPT) de carteras, formalizada por Harry Markowitz, se modelizan los precios de los activos a través de los retornos (o relación de cambio) entre periodos. Esto permite comparar la evolución de los precios de múltiples activos entre sí, además de centralizar los datos, volviéndolos estacionarios. Además, únicamente es necesaria la media y varianza para calcular una asignación óptima que maximice la relación riesgo-retorno, asumiendo que se puedan observar los parámetros. @markowitzPortfolioSelection1952
@@ -18,8 +18,7 @@ Cabe preguntarnos: ¿De dónde viene esta modelización? ¿Por qué sólo la med
 La primera aplicación significativa de las matemáticas a la inversión en activos fue por L. Bachelier, quién observó que los movimientos en la bolsa de París podían ser descritos a través del Movimiento Browniano @jerison430NOTICESAMS. Este fue investigado por el propio Einstein, quién reconoció que el movimiento de partículas en un medio, como una mota de polen en el agua, es el resultado de multitud de <u>interacciones aleatorias</u> entre partículas individuales. Aplicado en los mercados financieros, permite modelizar la evolución en los precios, descrita como el resultado de infinitos cambios minúsculos independientes entre sí.
 @MovimientoBrownianoGeometrico2022
 
-<Grafica src="galton-board" titulo="Tabla de Galton" altura={400} />
-
+ <Grafica src="galton-board-v2" titulo="Tablero de Galton — 300 bolas" altura={560} />
 
 Las interacciones entre múltiples objetos del Movimiento Browniano no pueden ser resueltas modelizando todas las partículas. Es necesario por lo tanto utilizar modelos probabilísticos aplicados a poblaciones estadísticas. Con el objetivo de ofrecer una comprensión completa revisamos dos planteamientos a continuación.
 
@@ -45,8 +44,6 @@ En su formulación aritmética, el Movimiento Browniano no es adecuado para mode
 Se modeliza por tanto utilizando el logaritmo del precio, ya que permite relacionar modelos aditivos con multiplicativos, esta transformación es monotónica y permite normalizar los datos, a la vez que mantiene la estructura. Si el lector quiere profundizar en este tipo de transformaciones se le recomienda investigar las transformaciones de Box-Cox.
 
 <Grafica src="precio-vs-log-precio" titulo="Precios vs log-precios" altura={400} />
-
-
 
  Sea $\mu \in \mathbb{R}, \sigma >0, P_{0}>0$, se define el Movimiento Browniano Geométrico como un proceso estocástico de tiempo continuo $\{P_{t}: t \ge 0 \}$ a través de la siguiente ecuación diferencial estocástica (EDE):
 
@@ -89,7 +86,6 @@ Esta propiedad de linealidad los hace útiles para el cálculo y comparación de
 
 <Grafica src="retornos apple" titulo="Retornos APPL" altura={400} />
 
-
 ## Log-retornos:
 
 $$r_t=\ln \left(\frac{P_t}{P_{t-1}}\right)=\ln(1+R_t) \Rightarrow P_t= P_{t-1}e^{r_{t}}$$
@@ -129,7 +125,6 @@ $$P_{t+\Delta t} = P_t \exp\!\left[\left(\mu - \tfrac{1}{2}\sigma^2\right)\Delta
 Este esquema representa una simulación de Monte Carlo, un método por el que simulamos N paseos aleatorios regidos por una distribución normal, para estudiar el abanico de posibles trayectorias que pueden tomar los precios bajo estas dinámicas:
 
 <Grafica src="gbm-simulacion" titulo="Simulación Monte Carlo del GBM" altura={400} />
-
 
 
 La conexión entre el paseo aleatorio discreto y el proceso continuo está garantizada por el Teorema de Donsker, mencionado anteriormente.

@@ -1,6 +1,7 @@
 ---
-u_modif: 2026-03-08 | 02:56
----
+
+## u_modif: 2026-03-08 | 02:56
+
 ```markdown
 ---
 
@@ -22,10 +23,12 @@ Gestión citas:
 ### Estructura esperada por publicación
 
 ```
+
 Publicaciones/
 └── mi-articulo/
     ├── index.mdx       ← artículo principal con frontmatter
     └── datos.json      ← (opcional) datos para gráficas Plotly
+
 ```
 
 El frontmatter del `index.mdx`:
@@ -87,6 +90,7 @@ published: false                    # opcional — omitir o true para publicar
 - TOC colapsable en móvil.
 - Páginas de categorías (`/publicaciones/tag/[tag]`) aprovechando el campo `tags`.
 
+```
 
 ```
 
