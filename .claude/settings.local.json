@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"/c/Users/Yann/Documents/digiyann/1 - 🛠️ Organización/14 - ✔️Proyectos/Publicaciones/Publicas\" remote -v)",
+      "Bash(git -C \"/c/Users/Yann/Documents/digiyann/1 - 🛠️ Organización/14 - ✔️Proyectos/Publicaciones/Publicas\" log --oneline origin/master..master)",
+      "Bash(git -C \"/c/Users/Yann/Documents/digiyann/1 - 🛠️ Organización/14 - ✔️Proyectos/Publicaciones/Publicas\" pull origin master --allow-unrelated-histories --no-edit)"
+    ]
+  }
+}
