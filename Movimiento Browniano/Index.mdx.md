@@ -6,7 +6,7 @@ tags:
   - modelizacion
   - ✔️
 published: true
-u_modif: 2026-03-08 | 02:34
+u_modif: 2026-03-08 | 03:23
 ---
 # Introducción
 En la Teoría Moderna de Optimización (MPT) de carteras, formalizada por Harry Markowitz, se modelizan los precios de los activos a través de los retornos (o relación de cambio) entre periodos. Esto permite comparar la evolución de los precios de múltiples activos entre sí, además de centralizar los datos, volviéndolos estacionarios. Además, únicamente es necesaria la media y varianza para calcular una asignación óptima que maximice la relación riesgo-retorno, asumiendo que se puedan observar los parámetros. @markowitzPortfolioSelection1952
@@ -15,8 +15,6 @@ Cabe preguntarnos: ¿De dónde viene esta modelización? ¿Por qué sólo la med
 
 # Movimiento Browniano
 @BrownianMotion2026
-[[Movimiento Browniano]]
-
 La primera aplicación significativa de las matemáticas a la inversión en activos fue por L. Bachelier, quién observó que los movimientos en la bolsa de París podían ser descritos a través del Movimiento Browniano @jerison430NOTICESAMS. Este fue investigado por el propio Einstein, quién reconoció que el movimiento de partículas en un medio, como una mota de polen en el agua, es el resultado de multitud de <u>interacciones aleatorias</u> entre partículas individuales. Aplicado en los mercados financieros, permite modelizar la evolución en los precios, descrita como el resultado de infinitos cambios minúsculos independientes entre sí.
 @MovimientoBrownianoGeometrico2022
 
@@ -124,7 +122,7 @@ En el mundo real las variables no son completamente independientes: distintos ev
 
 Tampoco son observables, es necesario estimarlos, lo que rompe los principios de optimalidad del marco MPT, el enfoque por lo tanto está en minimizar el error de estimación y acercanos a una predicción robusta.
 # Simulación o cálculo del BM
-Para generar simulaciones de movimiento browniano, podemos discretizar el proceso continuo mediante un paseo aleatorio bajo la [[Propiedad markoviana]]. Dado un intervalo de tiempo $\Delta t$, la discretización de la EDE es:
+Para generar simulaciones de movimiento browniano, podemos discretizar el proceso continuo mediante un paseo aleatorio bajo la propiedad markoviana. Dado un intervalo de tiempo $\Delta t$, la discretización de la EDE es:
 
 $$P_{t+\Delta t} = P_t \exp\!\left[\left(\mu - \tfrac{1}{2}\sigma^2\right)\Delta t + \sigma\sqrt{\Delta t}\;\varepsilon_t\right], \quad \varepsilon_t \sim \mathcal{N}(0,1)$$
 
